@@ -1,0 +1,567 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+}
+
+#header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  background-color: rgb(0, 0, 0);
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+}
+
+#header i {
+  margin-left: 33px;
+  color: white;
+  font-size: 30px;
+
+}
+
+#header h1 {
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  font-size: 40px;
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#nav {
+  width: 100%;
+  z-index: 3;
+}
+
+#nav nav {
+  display: flex;
+  background-color: rgb(68, 68, 68);
+  justify-content: space-around;
+}
+
+#nav a {
+  color: white;
+  display: flex;
+  padding: 10px;
+
+}
+
+#nav a:hover {
+  transform: scale(1.5);
+}
+
+#side-menu {
+  background-color: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(50px);
+  left: -100vw;
+  position: fixed;
+  justify-content: flex-start;
+  width: 50%;
+  height: 50%;
+  z-index: 100;
+  border-radius: 20px;
+}
+
+#side-menu i {
+  margin-top: 1em;
+  margin-left: 1em;
+  color: rgb(0, 0, 0);
+}
+
+.side-menu-open {
+  transition: all 1s;
+  transform: translateX(100vw);
+}
+
+#side-menu nav {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: rgb(250, 250, 250);
+  border-radius: 60px;
+}
+
+#side-menu nav a {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+#side-menu nav a:hover {
+  text-decoration: underline;
+}
+
+.images-container {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 80vh;
+}
+
+.images-container img {
+  width: 40%;
+  height: auto;
+  margin-top: 30px;
+}
+
+.menu-image {
+  border-radius: 20px;
+  position: absolute;
+  right: -100%;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: slideInFromRight 5s linear infinite;
+  animation-delay: calc(1s * var(--image-number));
+}
+
+.flex-container {
+  width: 100%;
+  background-color: whitesmoke;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-container div {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.flex-container div img {
+  border-radius: 13px;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.flex-container div img:hover {
+  transform: scale(1.05);
+}
+
+.footer {
+  text-align: center;
+  background-color: #8a8a8a;
+  color: white;
+}
+
+.footer nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.footer a {
+  margin: 10px;
+  color: white;
+}
+
+/*PURCHASE -----------------------------------*/
+.container {
+  color: #333;
+  padding: 20px;
+}
+
+#product-form {
+  padding-top: 10px;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#product-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#product-form .btn-primary {
+  background-color: #8a8a8a;
+  border-color: #8a8a8a;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#product-form .btn-primary:hover {
+  background-color: #000000;
+  border-color: #000000;
+}
+
+#product-error,
+#capacity-error,
+#finish-error,
+#extra-error {
+  color: #ff3b30;
+  font-size: 14px;
+}
+
+.left-side {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.left-side h2 {
+  font-weight: normal;
+  color: #333;
+}
+
+#apples {
+  list-style-type: none;
+  padding: 0;
+}
+
+#apples ul {
+  padding: 10px 0;
+  border-bottom: 1px solid #eaeaea;
+  text-align: center;
+}
+
+#apples li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eaeaea;
+  text-align: center;
+}
+
+.footer_purchase col-12 col-md-6 col-lg-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.footer_purchase col-12 col-md-6 col-lg-3 a {
+  margin: 5px 0;
+  color: white;
+}
+
+.footer_purchase {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #8a8a8a;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.footer_purchase a {
+  color: white;
+  text-decoration: none;
+}
+
+.col-12.col-md-6.col-lg-3 a {
+  color: white;
+}
+
+/*SMALL-----------------------------------Media queries//---------------------//*/
+@media only screen and (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  #header {
+    height: 80px;
+  }
+
+  #header i {
+    font-size: 24px;
+  }
+
+  #header h1 {
+    font-size: 30px;
+  }
+
+  #nav {
+    display: none;
+  }
+
+  #side-menu {
+    width: 100vw;
+    height: 45vh;
+  }
+
+  #side-menu nav a {
+    padding-top: 20px;
+    font-size: 17px;
+  }
+
+  .images-container img {
+    width: 80%;
+  }
+
+  .flex-container div img {
+    width: 90%;
+  }
+
+  .footer nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .footer nav a {
+    margin: 5px 0;
+  }
+
+  .footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+}
+
+/* MEDIUM-------------------------------------------------------------- */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .footer nav {
+    justify-content: space-around;
+  }
+
+  .footer a {
+    width: 45%;
+    text-align: center;
+  }
+
+  #header {
+    height: 90px;
+  }
+
+  #header i {
+    font-size: 28px;
+  }
+
+  #header h1 {
+    font-size: 35px;
+  }
+
+  #nav {
+    display: none;
+  }
+
+  #side-menu {
+    width: 100vw;
+    height: 50vh;
+  }
+
+  #side-menu nav a {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 28px;
+  }
+
+  .images-container img {
+    width: 60%;
+  }
+
+  .footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+}
+
+/*LARGER---------------------------------------------*/
+@media only screen and (min-width: 1024px) {
+  #header {
+    height: 100px;
+  }
+
+  #header i {
+    font-size: 30px;
+  }
+
+  #header h1 {
+    font-size: 40px;
+  }
+
+  #side-menu {
+    display: none;
+  }
+
+  .images-container img {
+    width: 40%;
+  }
+
+  .footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  .footer nav {
+    justify-content: center;
+    padding: 20px 50px;
+  }
+
+  .footer nav a {
+    margin: 0 15px;
+  }
+}
+
+/*BUTTON-BUY---------------------------------------------*/
+.button {
+  padding: 6px 10px;
+  margin: 5px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.button-edit {
+  background-color: #8a8a8a;
+  color: white;
+}
+
+.button-edit:hover {
+  background-color: #000000;
+}
+
+.button-delete {
+  background-color: #fc5c65;
+  color: white;
+}
+
+.button-delete:hover {
+  background-color: #fc3c44;
+}
+/*REVEAL EFFECT AND FINAL DELIVERY :( */ 
+#image-reveal {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 3%;
+  border-radius: 33px;
+}
+
+#support {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 3%;
+  border-radius: 33px;
+}
+
+#help {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 3%;
+  border-radius: 33px;
+}
+
+#applecare {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 3%;
+  border-radius: 33px;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.pay-button {
+  position: relative;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.pay-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border: 3px solid transparent;
+  border-top-color: blue;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  opacity: 0;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.pay-button:hover {
+  color: transparent;
+}
+
+.pay-button:hover::after {
+  opacity: 1;
+}

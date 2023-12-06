@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buying</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/icon.png" title="AppleIcon">
+</head>
+
+<body class="purchasing">
+  <div id="header">
+    <i class="fa-brands fa-apple" id="header-menu-icon"></i>
+    <h1>Think Different.</h1>
+  </div>
+  <div id="nav">
+    <nav>
+      <a href="index.html" target="_blank">Store</a>
+      <a>Mac</a>
+      <a>iPad</a>
+      <a>iPhone</a>
+      <a>Watch</a>
+      <a>Airpods</a>
+    </nav>
+  </div>
+  <div id="side-menu">
+    <i class="fa-solid fa-x" id="side-menu-icon"></i>
+    <nav>
+      <a href="index.html" target="_blank">Store</a>
+      <a>Mac</a>
+      <a>iPad</a>
+      <a>iPhone</a>
+      <a>Watch</a>
+      <a>Airpods</a>
+    </nav>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <form id="product-form">
+          <div class="mb-3 mt-3">
+            <label for="product" class="product">Which product do you want</label>
+            <input type="text" class="form-control" id="product" placeholder="Enter product" name="product">
+            <span id="product-error" style="visibility:hidden;">*Field Required</span>
+          </div>
+          <div class="mb-3">
+            <label for="capacity" class="capacity">Storage (GB). How much space do you need?</label>
+            <input type="number" class="form-control" id="capacity" placeholder="Enter capacity" name="capacity">
+            <span id="capacity-error" style="visibility:hidden;">*Field Required</span>
+          </div>
+          <div class="mb-3">
+            <label for="color" class="finish">Finish. Pick your favorite.</label>
+            <input type="text" class="form-control" id="color" placeholder="Enter color" name="color">
+            <span id="finish-error" style="visibility:hidden;">*Field Required</span>
+          </div>
+          <div class="mb-3">
+            <label for="charger" class="extra">Need a charger?</label>
+            <input type="checkbox" class="form-check-input" id="charger" name="extra">
+            <span id="extra-error" style="visibility:hidden;">*Field Required</span>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="left-side">
+        <h2 class="m-5">Order</h2>
+        <ul id="apples">
+          <li>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer_purchase">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-3">
+          <a>2023 - Todos los derechos reservados</a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <a>FAQs</a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <a>Sobre Nosotros</a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <a>Contacto</a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <a>Redes sociales</a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <a>Compromiso con el medioambiente</a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <a>Empresas</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/dc8592b5da.js" crossorigin="anonymous"></script>
+  <script src="js/side-menu.js"></script>
+  <script src="js/buy.js"></script>
+</body>
+
+</html>
